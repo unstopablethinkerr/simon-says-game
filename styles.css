@@ -1,0 +1,173 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+header, main, footer {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#startButton, #replayButton, #settingsButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#startButton:hover, #replayButton:hover, #settingsButton:hover {
+    background-color: #45a049;
+}
+
+#instructions p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+#leaderboard h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#scoresList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#scoresList li {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Game Area Styles */
+#gameArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    margin-bottom: 20px;
+}
+
+#level, #score {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+#buttonsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.gameButton {
+    width: 100%;
+    padding-top: 100%; /* Makes the buttons square */
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gameButton:active {
+    transform: scale(0.95);
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+#timerBarContainer {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#timerBar {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 100%;
+    transition: width 1s linear;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    #startButton, #replayButton, #settingsButton {
+        font-size: 0.9em;
+    }
+
+    #instructions p {
+        font-size: 0.9em;
+    }
+
+    #leaderboard h2 {
+        font-size: 1.2em;
+    }
+
+    #scoresList li {
+        font-size: 0.9em;
+    }
+
+    #level, #score {
+        font-size: 1em;
+    }
+
+    #buttonsContainer {
+        gap: 5px;
+    }
+
+    #timerBarContainer {
+        margin-top: 10px;
+    }
+}
