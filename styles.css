@@ -144,8 +144,9 @@ button:active {
     background-color: #ffee58;
 }
 
-.red:hover, .blue:hover, .green:hover, .yellow:hover {
-    filter: brightness(1.2);
+.gameButton.active {
+    filter: brightness(1.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 #timerBarContainer {
@@ -205,5 +206,44 @@ button:active {
 
     #timerBarContainer {
         margin-top: 10px;
+    }
+
+    /* Ensure the header and buttons fit within the screen */
+    header, main, footer {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 0.8em;
+    }
+
+    #instructions p {
+        font-size: 0.8em;
+    }
+
+    #leaderboard h2 {
+        font-size: 1.3em;
+    }
+
+    #scoresList li {
+        font-size: 0.8em;
+    }
+
+    #level, #score {
+        font-size: 1em;
+    }
+
+    #buttonsContainer {
+        gap: 8px;
+    }
+
+    #timerBarContainer {
+        margin-top: 8px;
     }
 }
