@@ -1,21 +1,23 @@
-/* styles.css */
-
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #e8f5e9;
+    color: #333;
+    overflow: hidden;
 }
 
 .container {
     text-align: center;
     width: 100%;
     max-width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 header, main, footer {
@@ -23,33 +25,47 @@ header, main, footer {
 }
 
 header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #2e7d32;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#startButton, #replayButton, #settingsButton {
-    padding: 10px 20px;
+button {
+    padding: 12px 25px;
     font-size: 1em;
+    font-weight: bold;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #66bb6a;
     color: white;
     border: none;
-    border-radius: 5px;
-    margin: 5px;
+    border-radius: 8px;
+    margin: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-#startButton:hover, #replayButton:hover, #settingsButton:hover {
-    background-color: #45a049;
+button:hover {
+    background-color: #57a457;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #4a8e4b;
 }
 
 #instructions p {
     font-size: 1em;
     margin: 10px 0;
+    line-height: 1.5;
+    color: #555;
 }
 
 #leaderboard h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 10px;
+    color: #388e3c;
 }
 
 #scoresList {
@@ -60,6 +76,7 @@ header h1 {
 #scoresList li {
     font-size: 1em;
     margin: 5px 0;
+    color: #555;
 }
 
 /* Game Area Styles */
@@ -67,6 +84,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 #display {
@@ -74,15 +92,17 @@ header h1 {
 }
 
 #level, #score {
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-weight: bold;
     margin: 5px 0;
+    color: #2e7d32;
 }
 
 #buttonsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 15px;
     width: 100%;
     max-width: 400px;
 }
@@ -94,57 +114,73 @@ header h1 {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gameButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .gameButton:active {
     transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .red {
-    background-color: red;
+    background-color: #ef5350;
 }
 
 .blue {
-    background-color: blue;
+    background-color: #42a5f5;
 }
 
 .green {
-    background-color: green;
+    background-color: #66bb6a;
 }
 
 .yellow {
-    background-color: yellow;
+    background-color: #ffee58;
+}
+
+.red:hover, .blue:hover, .green:hover, .yellow:hover {
+    filter: brightness(1.2);
 }
 
 #timerBarContainer {
     width: 100%;
     max-width: 400px;
-    margin-top: 20px;
+    height: 20px;
     background-color: #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
 #timerBar {
-    height: 20px;
-    background-color: #4CAF50;
+    height: 100%;
+    background-color: #66bb6a;
     width: 100%;
     transition: width 1s linear;
+    border-radius: 10px 0 0 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     .container {
         width: 90%;
+        padding: 10px;
     }
 
     header h1 {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
-    #startButton, #replayButton, #settingsButton {
+    button {
         font-size: 0.9em;
+        padding: 10px 20px;
     }
 
     #instructions p {
@@ -152,7 +188,7 @@ header h1 {
     }
 
     #leaderboard h2 {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     #scoresList li {
@@ -160,11 +196,11 @@ header h1 {
     }
 
     #level, #score {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     #buttonsContainer {
-        gap: 5px;
+        gap: 10px;
     }
 
     #timerBarContainer {
