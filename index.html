@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simon Says</h1>
+            <button id="startButton">Start Game</button>
+            <div id="instructions">
+                <p>Follow the sequence of lights and sounds. Click the buttons in the correct order.</p>
+            </div>
+            <div id="leaderboard">
+                <h2>Leaderboard</h2>
+                <ul id="scoresList"></ul>
+            </div>
+        </header>
+        <main>
+            <div id="gameArea">
+                <div id="display">
+                    <p id="level">Level: 0</p>
+                    <p id="score">Score: 0</p>
+                </div>
+                <div id="buttonsContainer">
+                    <button id="redButton" class="gameButton red"></button>
+                    <button id="blueButton" class="gameButton blue"></button>
+                    <button id="greenButton" class="gameButton green"></button>
+                    <button id="yellowButton" class="gameButton yellow"></button>
+                </div>
+                <div id="timerBarContainer">
+                    <div id="timerBar"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <button id="replayButton">Replay</button>
+            <button id="settingsButton">Settings</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
