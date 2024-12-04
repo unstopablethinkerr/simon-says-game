@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('startButton');
     const replayButton = document.getElementById('replayButton');
-    const settingsButton = document.getElementById('settingsButton');
+ 
     const levelDisplay = document.getElementById('level');
     const scoreDisplay = document.getElementById('score');
     const buttons = document.querySelectorAll('.gameButton');
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startButton.addEventListener('click', startGame);
     replayButton.addEventListener('click', startGame);
-    settingsButton.addEventListener('click', showSettings);
 
     buttons.forEach(button => {
         button.addEventListener('click', handleButtonClick);
@@ -110,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startTimer() {
-        let timeLeft = 5; // 5 seconds to respond
+        let timeLeft = 10; // 10 seconds to respond
         timerBar.style.width = '100%';
         timer = setInterval(() => {
             timeLeft -= 0.1;
