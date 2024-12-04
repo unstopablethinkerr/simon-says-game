@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('startButton');
     const replayButton = document.getElementById('replayButton');
- 
+
     const levelDisplay = document.getElementById('level');
     const scoreDisplay = document.getElementById('score');
+    const statusDisplay = document.getElementById('status');
     const buttons = document.querySelectorAll('.gameButton');
     const timerBar = document.getElementById('timerBar');
     const colors = ['red', 'blue', 'green', 'yellow'];
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(timer);
         updateDisplay();
         timerBar.style.width = '100%';
+        statusDisplay.textContent = 'Listen';
     }
 
     function nextLevel() {
@@ -65,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function playSequence() {
         let index = 0;
         isPlayerTurn = false;
+        statusDisplay.textContent = 'Listen';
         const interval = setInterval(() => {
             if (index < sequence.length) {
                 playButton(sequence[index]);
@@ -73,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(interval);
                 isPlayerTurn = true;
                 userSequence = [];
+                statusDisplay.textContent = 'Play Now';
                 startTimer();
             }
         }, 1000);
@@ -124,9 +128,5 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameOver() {
         alert(`Game Over! Your score is ${score}`);
         resetGame();
-    }
-
-    function showSettings() {
-        // Implement settings functionality here
     }
 });
