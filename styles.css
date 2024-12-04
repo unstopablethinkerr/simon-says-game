@@ -62,22 +62,7 @@ button:active {
     color: #555;
 }
 
-#leaderboard h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #388e3c;
-}
 
-#scoresList {
-    list-style-type: none;
-    padding: 0;
-}
-
-#scoresList li {
-    font-size: 1em;
-    margin: 5px 0;
-    color: #555;
-}
 
 /* Game Area Styles */
 #gameArea {
@@ -204,14 +189,7 @@ button:active {
         font-size: 0.9em;
     }
 
-    #leaderboard h2 {
-        font-size: 1.5em;
-    }
-
-    #scoresList li {
-        font-size: 0.9em;
-    }
-
+  
     #level, #score {
         font-size: 1.2em;
     }
@@ -240,14 +218,6 @@ button:active {
     }
 
     #instructions p {
-        font-size: 0.8em;
-    }
-
-    #leaderboard h2 {
-        font-size: 1.3em;
-    }
-
-    #scoresList li {
         font-size: 0.8em;
     }
 
