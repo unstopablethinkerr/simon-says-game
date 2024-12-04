@@ -12,10 +12,19 @@ body {
     overflow: hidden;
 }
 
+.bounding-box {
+    border: 2px solid #2e7d32;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 90%;
+    width: 600px;
+}
+
 .container {
     text-align: center;
     width: 100%;
-    max-width: 600px;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -62,8 +71,6 @@ button:active {
     color: #555;
 }
 
-
-
 /* Game Area Styles */
 #gameArea {
     display: flex;
@@ -76,7 +83,7 @@ button:active {
     margin-bottom: 20px;
 }
 
-#level, #score {
+#level, #score, #status {
     font-size: 1.4em;
     font-weight: bold;
     margin: 5px 0;
@@ -92,20 +99,6 @@ button:active {
     max-width: 400px;
 }
 
-/* .gameButton {
-    width: 100%;
-    padding-top: 100%; */
-/* Makes the buttons square */
-/*     position: relative;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-} */ 
-
-
-
 .gameButton {
     width: 100%;
     padding-top: 100%;
@@ -116,8 +109,6 @@ button:active {
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 -3px 5px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .gameButton:hover {
     transform: scale(1.05);
@@ -171,8 +162,13 @@ button:active {
 
 /* Responsive Design */
 @media (max-width: 600px) {
+    .bounding-box {
+        width: 95%;
+        padding: 15px;
+    }
+
     .container {
-        width: 90%;
+        width: 100%;
         padding: 10px;
     }
 
@@ -189,8 +185,7 @@ button:active {
         font-size: 0.9em;
     }
 
-  
-    #level, #score {
+    #level, #score, #status {
         font-size: 1.2em;
     }
 
@@ -202,7 +197,6 @@ button:active {
         margin-top: 10px;
     }
 
-    /* Ensure the header and buttons fit within the screen */
     header, main, footer {
         margin-bottom: 10px;
     }
@@ -221,7 +215,7 @@ button:active {
         font-size: 0.8em;
     }
 
-    #level, #score {
+    #level, #score, #status {
         font-size: 1em;
     }
 
